@@ -4,13 +4,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
+<body ng-app="angularApp">
     @RenderBody()
 
-    @Scripts.Render("~/bundles/jquery")
+    <div class="container" ng-view=""></div>
+
+    <script src="Scripts/jquery-1.8.2.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-cookies.js"></script>
+    <script src="Scripts/angular-resource.js"></script>
+    <script src="Scripts/angular-sanitize.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+
+    <script src="app/scripts/app.js"></script>
+    <script src="app/scripts/controllers/main.js"></script>
+
     @RenderSection("scripts", required: false)
 </body>
 </html>
