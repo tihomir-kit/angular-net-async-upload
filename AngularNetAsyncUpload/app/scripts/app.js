@@ -1,17 +1,18 @@
 'use strict';
 
-angular.module('angularApp', [
+angular.module('angularUploadApp', [
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'angularFileUpload'
 ])
 
 .config(function ($routeProvider) {
     $routeProvider
     .when('/', {
-        templateUrl: 'app/views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'app/views/upload.html',
+        controller: 'UploadCtrl'
     })
     .otherwise({
         redirectTo: '/'

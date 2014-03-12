@@ -5,21 +5,19 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
 </head>
-<body ng-app="angularApp">
+<body ng-app="angularUploadApp">
     @RenderBody()
 
-    <div class="container" ng-view=""></div>
-
     <script src="Scripts/jquery-1.8.2.js"></script>
+    <script src="Scripts/vendor/angular-file-upload-shim.js"></script>
     <script src="Scripts/angular.js"></script>
+    <script src="Scripts/vendor/angular-file-upload.js"></script>
     <script src="Scripts/angular-cookies.js"></script>
     <script src="Scripts/angular-resource.js"></script>
     <script src="Scripts/angular-sanitize.js"></script>
     <script src="Scripts/angular-route.js"></script>
 
     <script src="app/scripts/app.js"></script>
-    <script src="app/scripts/controllers/main.js"></script>
-
-    @RenderSection("scripts", required: false)
+    <script src="app/scripts/controllers/upload.js"></script>
 </body>
 </html>
